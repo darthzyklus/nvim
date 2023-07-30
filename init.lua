@@ -38,8 +38,9 @@ P.S. You can delete this when you're done too. It's your config now :)
 -- Set <space> as the leader key
 -- See `:help mapleader`
 --  NOTE: Must happen before plugins are required (otherwise wrong leader will be used)
-vim.g.mapleader = ' '
-vim.g.maplocalleader = ' '
+require("options");
+require("remap");
+
 
 -- Install package manager
 --    https://github.com/folke/lazy.nvim
@@ -240,7 +241,7 @@ vim.o.smartcase = true
 vim.wo.signcolumn = 'yes'
 
 -- Decrease update time
-vim.o.updatetime = 250
+vim.o.updatetime = 50
 vim.o.timeoutlen = 300
 
 -- Set completeopt to have a better completion experience
@@ -248,6 +249,8 @@ vim.o.completeopt = 'menuone,noselect'
 
 -- NOTE: You should make sure your terminal supports this
 vim.o.termguicolors = true
+
+vim.o.colorcolumn = "100"
 
 -- [[ Basic Keymaps ]]
 
@@ -517,18 +520,6 @@ cmp.setup {
     { name = 'luasnip' },
   },
 }
-
-local options = {
-  relativenumber = true, -- set relative numbered lines
-  shiftwidth = 4, -- the number of spaces inserted for each indentation
-  tabstop = 4, -- insert 4 spaces for a tab
-  wrap = false,
-}
-
-for k, v in pairs(options) do
-  vim.opt[k] = v
-end
-
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
