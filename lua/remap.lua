@@ -16,3 +16,5 @@ vim.keymap.set("i", "<M-k>", "<Esc>:m .-2<CR>==gi", opts)
 
 vim.keymap.set("v", "<M-j>", ":m '>+1<CR>gv=gv", opts)
 vim.keymap.set("v", "<M-k>", ":m '<-2<CR>gv=gv", opts)
+
+vim.keymap.set("v", "<leader>rr", "<Esc><cmd>lua require('telescope').extensions.refactoring.refactors()<CR>", opts)
