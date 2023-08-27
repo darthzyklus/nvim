@@ -217,6 +217,12 @@ vim.o.relativenumber = true
 vim.o.shiftwith = 4
 vim.o.tapstop = 4
 vim.o.wrap = false
+vim.o.swapfile = false
+vim.o.smartindent = true
+vim.o.backup = false
+vim.o.scrolloff = 8
+vim.o.sidescrolloff = 8
+
 
 -- [[ Basic Keymaps ]]
 
