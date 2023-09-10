@@ -66,6 +66,8 @@ require('lazy').setup({
 
             -- Adds a number of user-friendly snippets
             'rafamadriz/friendly-snippets',
+
+            'hrsh7th/cmp-nvim-lsp-signature-help',
         },
     },
 
@@ -493,7 +495,12 @@ cmp.setup {
     sources = {
         { name = 'nvim_lsp' },
         { name = 'luasnip' },
+        { name = 'nvim_lsp_signature_help' }
     },
+    window = {
+        completion = cmp.config.window.bordered(),
+        documentation = cmp.config.window.bordered()
+    }
 }
 
 -- The line beneath this is called `modeline`. See `:help modeline`
