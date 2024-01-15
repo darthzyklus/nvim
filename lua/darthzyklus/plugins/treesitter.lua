@@ -4,14 +4,14 @@ return {
     dependencies = {
         "nvim-treesitter/nvim-treesitter-textobjects"
     },
-    config = function () 
+    config = function ()
       local configs = require("nvim-treesitter.configs")
 
       configs.setup({
-          ensure_installed = { "javascript", "rust", "go", "typescript" },
+          ensure_installed = { "lua", "javascript", "rust", "go", "typescript", "python", "html", "css" },
           sync_install = false,
           highlight = { enable = true },
-          indent = { enable = true },  
+          indent = { enable = true },
         })
     end
 }

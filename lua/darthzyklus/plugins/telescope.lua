@@ -8,13 +8,12 @@ return {
     config = function ()
         local telescope = require("telescope")
         local actions = require("telescope.actions")
+        local builtin = require('telescope.builtin')
 
         telescope.setup({
             defaults = {
                 layout_config = {
                     horizontal = {
-                        width = 0.95,
-                        height = 0.95,
                         preview_width = 0.55,
                         height = {
                             padding = 0
@@ -37,5 +36,10 @@ return {
 
         telescope.load_extension("fzf")
             
+
+        vim.keymap.set('n', '<leader>pf', builtin.find_files, {})
+        vim.keymap.set('n', '<leader>ps', builtin.live_grep, {})
+        vim.keymap.set('n', '<C-p>', builtin.git_files, {})
+
     end
 }
