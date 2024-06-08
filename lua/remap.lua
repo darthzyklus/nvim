@@ -1,4 +1,3 @@
-vim.g.mapleader = " "
 local opts = { noremap = true, silent = true }
 
 -- Move text up and down
