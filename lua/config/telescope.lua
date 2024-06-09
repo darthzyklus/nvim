@@ -6,13 +6,14 @@ telescope.setup({
     defaults = {
         sorting_strategy = "ascending",
         layout_config = {
+            prompt_position = "top",
             horizontal = {
                 preview_width = 0.55,
                 height = {
-                    padding = 0
+                    padding = 0.05
                 },
                 width = {
-                    padding = 0
+                    padding = 0.05
                 }
             }
         },
@@ -21,6 +22,14 @@ telescope.setup({
                 ["<C-k>"] = actions.move_selection_previous,
                 ["<C-j>"] = actions.move_selection_next,
             }
+        }
+    },
+    pickers = {
+        find_files = {
+            previewer = false,
+            layout_config = {
+                prompt_position = "top",
+            },
         }
     },
     path_display = { "smart" },
