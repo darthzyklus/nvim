@@ -1,6 +1,7 @@
 local telescope = require("telescope")
 local actions = require("telescope.actions")
 local builtin = require('telescope.builtin')
+local action_layout = require("telescope.actions.layout")
 
 telescope.setup({
     defaults = {
@@ -19,17 +20,16 @@ telescope.setup({
         },
         mappings = {
             i = {
+                ["<esc>"] = actions.close,
+                ["<M-p>"] = action_layout.toggle_preview,
                 ["<C-k>"] = actions.move_selection_previous,
                 ["<C-j>"] = actions.move_selection_next,
             }
         }
     },
     pickers = {
-        find_files = {
-            previewer = false,
-            layout_config = {
-                prompt_position = "top",
-            },
+        git_files = {
+            previewer = false
         }
     },
     path_display = { "smart" },
