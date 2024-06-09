@@ -4,6 +4,7 @@ local builtin = require('telescope.builtin')
 
 telescope.setup({
     defaults = {
+        sorting_strategy = "ascending",
         layout_config = {
             horizontal = {
                 preview_width = 0.55,
