@@ -5,7 +5,7 @@ local action_layout = require("telescope.actions.layout")
 
 telescope.setup({
     defaults = {
-        sorting_strategy = "ascending",
+        -- sorting_strategy = "ascending",
         layout_config = {
             prompt_position = "top",
             horizontal = {
@@ -45,6 +45,7 @@ telescope.load_extension("fzf")
 telescope.load_extension("ui-select")
 
 
-vim.keymap.set('n', '<leader>pf', builtin.find_files, {})
-vim.keymap.set('n', '<leader>ps', builtin.live_grep, {})
-vim.keymap.set('n', '<C-p>', builtin.git_files, {})
+vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
+vim.keymap.set('n', '<leader>fs', builtin.live_grep, {})
+vim.keymap.set('n', '<leader>fg', builtin.git_files, {})
+vim.keymap.set('n', '<leader>fb', builtin.buffers, {})

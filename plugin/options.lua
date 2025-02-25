@@ -44,3 +44,11 @@ vim.opt.termguicolors = true
 vim.opt.title = true
 vim.opt.titlelen = 0 -- do not shorten title
 vim.opt.showmode = false
+
+-- disable continous comments insertion after new linw
+vim.api.nvim_create_autocmd("FileType", {
+    pattern = "*",
+    callback = function()
+        vim.opt_local.formatoptions:remove({ 'r', 'o' })
+    end,
+})

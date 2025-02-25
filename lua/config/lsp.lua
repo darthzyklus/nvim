@@ -30,7 +30,7 @@ local on_attach = function(client, bufnr)
     keymap.set("n", "K", vim.lsp.buf.hover, opts)                                -- show documentation for what is under cursor
     keymap.set("n", "<C-k>", vim.lsp.buf.signature_help, opts)
     keymap.set("n", "<leader>rs", ":LspRestart<CR>", opts)                       -- mapping to restart lsp if necessary
-    keymap.set("n", "<leader>ff", format, opts)
+    -- keymap.set("n", "<leader>ft", format, opts)
 end
 
 -- nvim-cmp supports additional completion capabilities, so broadcast that to servers
